@@ -775,4 +775,25 @@ color: rgb(0, 101, 112);
   height:50px;
 
 }
+  .loginContainer{
+  margin-top:120px;
+  /* border: 2px solid; */
+  width:85%;
+  padding:80px 15px;
+  background-color: white;
+  border-radius: 20px;
+  font-family: 'Roboto', sans-serif;
+  box-shadow: 2px 2px 5px rgba(77, 77, 77, 0.281);
+}
+.singUpContainer{
+  margin-top:120px;
+  /* border: 2px solid; */
+  width:85%;
+  padding:80px 15px;
+  background-color: white;
+  border-radius: 20px;
+  font-family: 'Roboto', sans-serif;
+  box-shadow: 2px 2px 5px rgba(77, 77, 77, 0.24);
+}
+
 }

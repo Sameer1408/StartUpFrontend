@@ -1,11 +1,10 @@
 import './App.css';
-import React, { useState } from 'react';
+import React, { useState, useLayoutEffect } from 'react';
 import {
   BrowserRouter as Router,
   Switch,
   Route,
 } from "react-router-dom";
-
 import Home from './screens/Home';
 import UnderOrAboveAge from './component/UnderOrAboveAge';
 import ShopState from './context/shops/ShopState';
@@ -15,18 +14,11 @@ import Login from './component/Login';
 import Products from './screens/Products';
 import Footer from './component/Footer';
 import Alert from './component/Alert';
-import Checkout from './screens/Checkout';
 import UploadProduct from './screens/UploadProduct';
 import Testing from './screens/Testing';
 import AddtoCart from './screens/AddtoCart';
 import ProductDetails from './screens/ProductDetails';
 import Cart from './screens/Cart';
-import Profile from './screens/Profile';
-import CreateShop from './screens/CreateShop';
-import ShippingScreen from './screens/ShippingScreen';
-import CheckOutSteps from './screens/CheckOutSteps';
-import PaymentScreen from './screens/PaymentScreen';
-import PlaceOrderScreen from './screens/PlaceOrderScreen';
 
 
 function App() {
@@ -46,35 +38,14 @@ function App() {
     <>
       <ShopState>
         <Router>
-           <Navbar /> 
+          <Navbar />
           <Alert alert={alert} />
           <Switch>
             <Route exact path="/">
               <UnderOrAboveAge showAlret={showAlret} />
             </Route>
             <Route exact path="/home">
-            <Home/>
-            </Route>
-            <Route exact path="/profile">
-            <Profile/>
-            </Route> 
-            <Route exact path="/checkout">
-              <Checkout />
-            </Route>
-            <Route exact path="/shipping">
-              <ShippingScreen/>  
-            </Route>
-            <Route exact path="/payment">
-              <PaymentScreen/>
-            </Route>
-            <Route exact path="/placeorder">
-              <PlaceOrderScreen/>
-            </Route>
-            <Route exact path="/checkOutStep">
-              <CheckOutSteps/>
-            </Route>
-            <Route exact path="/createShop">
-              <CreateShop/>
+              <Home />
             </Route>
             <Route exact path="/uploadproduct">
               <UploadProduct />
@@ -86,18 +57,17 @@ function App() {
               <Login />
             </Route>
             <Route exact path="/:id/:qty/:price">
-              <Cart />
-            </Route>
+           <Cart/>
+             </Route>
             <Route exact path="/products/:shopName">
               <Products />
             </Route>
             <Route exact path="/:id">
-              <Testing showAlret={showAlret} />
+             <Testing showAlret={showAlret} />
             </Route>
             <Route exact path="/checkout">
               <SignUp />
             </Route>
-          
           </Switch>
           <Footer />
         </Router>

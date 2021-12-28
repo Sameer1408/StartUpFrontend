@@ -78,7 +78,7 @@ function Testing(props) {
       });
       const json = await response.json();
       console.log(json)
-      // window.location.reload();
+      window.location.reload();
     }
     else {
       props.showAlret('please fill the required details', 'warning');
